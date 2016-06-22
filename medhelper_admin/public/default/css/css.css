@@ -1,0 +1,538 @@
+a{
+    
+    color: black;
+    
+    text-decoration: none;
+}
+
+/*a:link { 
+
+    text-decoration: none;
+    color: black
+
+}
+
+a:visited {
+
+    text-decoration: none;
+        color: black
+    
+     color: black
+
+}
+
+
+a:active { 
+
+    text-decoration:none;
+
+        color: #3394c4
+
+    color: black;
+
+}
+a:hover { 
+
+    text-decoration:none;
+
+        color: red
+    
+    color: black;
+
+}*/
+
+.bobyBackGroud{
+
+    /*background-image: url(../images/inhouse_background.png);*/
+
+    width: 1280px;
+
+
+    height: 800px;
+
+
+
+
+}
+
+.boby{
+
+    margin: 0;
+
+    padding: 0;
+
+    /*    background-color:  rgb(239,241,230);*/
+
+
+    background: none repeat scroll 0 0 #e7e8eb;
+
+
+
+}
+
+
+.topBackGround{
+
+    /*background-image: url(../images/inhouse_top.png);	*/
+
+    width: 1282px;
+
+    height: 90px;
+
+    position: relative;
+}
+
+.banner{
+
+    /*	background-image: url(../images/inhouse_banner.png);	*/
+
+    width: 811px;
+
+    height: 35px;
+
+
+    font-size: 13px;
+
+
+}
+
+
+/*.wordRect{
+
+    -webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));
+}*/
+
+
+
+.left-table03 {
+
+
+    text-indent:7px;
+
+    /*    height: 42;*/
+
+    font-size:12px;
+/*    color:#555555;*/
+
+    text-decoration:none;
+
+    background-color:white;
+    /*    border-top:1px solid #fdfdfd;
+        
+        border-bottom:1px solid #dddddd;*/
+
+}
+
+.leftLines{
+
+    /*	background-image: url(../images/inhouse_lines.png) ;
+    
+            background-repeat: repeat-x;*/
+
+
+    /*background-color:  rgb(239,241,230);*/
+
+    color: black;
+
+    text-indent: 32px;
+
+    line-height: 45px;
+
+    font-size: 19px;
+
+
+
+    /*    background-image: url(../images/inhouse_table_backgroud.png);*/
+    width: 199px;
+    height: 42px;
+
+
+
+
+
+}
+
+.zhucaidan{
+
+    border-top: 1px solid #e7e7eb;
+    padding-bottom: 6px;
+    padding-top: 8px;
+}
+
+.zhucaidan  tbody tr td{
+
+    /*    background-image: url(../images/inhouse_table_backgroud.png) ;*/
+
+    width: 199px;
+
+    height: 42px;
+}
+
+.left-font{
+
+    /*    font-size: 16px;*/
+
+    color: rgb(38,78,99);
+
+    /*    font-weight: bold;*/
+}
+
+.left-a{
+
+
+
+    /*    font-size: 16px; 
+    
+        color: rgb(121, 16, 125); 
+    
+        text-indent: 39px;
+    
+        line-height: 33px;*/
+
+
+
+    height: 29px;
+
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    
+    min-width: 239px;
+    word-wrap: normal;
+    line-height: 33px;
+    text-indent: 51px;
+}
+
+
+
+.left-table03 tr:hover{
+
+    background-color: #f4f5f9;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.left-font03{
+    color: #8d8d8d;
+    line-height: 34px;
+    overflow: hidden;
+    padding: 0 30px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    word-wrap: normal;
+}
+
+
+.left-fontSmall{
+    display: block;
+
+    text-decoration: none;
+    
+    line-height: 33px;
+    
+    max-width: 1390px;
+}
+
+.left-a.selected a{
+    
+    color: white;
+}
+
+
+//--------------------------------
+
+
+.icon_subscribe_label {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 14px;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 38px;
+}
+.icon_service_label {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 -24px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 14px;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 38px;
+}
+.icon_verify_label {
+    display: inline-block;
+    height: 14px;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 37px;
+}
+.icon_verify_label.fail {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 -48px rgba(0, 0, 0, 0);
+}
+.icon_verify_label.success {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 -72px rgba(0, 0, 0, 0);
+}
+.icon_inbox {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 -96px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 15px;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 20px;
+}
+.icon_dot_notices {
+    background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z.png") no-repeat scroll 0 -121px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 10px;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 10px;
+}
+.account {
+    float: right;
+    font-size: 0;
+    padding-top: 10px;
+}
+.account a {
+    color: #222;
+}
+.account a:hover {
+    color: #459ae9;
+}
+.account a.account_primary_link {
+    color: #459ae9;
+}
+.account_meta {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: bottom;
+}
+.account_info {
+    margin-right: 8px;
+    min-width: 80px;
+    position: relative;
+}
+.account_info .avatar {
+    background-color: #f0f0f0;
+    height: 38px;
+    left: -50px;
+    position: absolute;
+    top: 0;
+    width: 38px;
+}
+.account_info .type_wrp {
+    left: 0;
+    position: absolute;
+    top: 2px;
+}
+.account_info .type_wrp .type {
+    vertical-align: top;
+}
+.account_info .nickname {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 18px;
+}
+.account_inbox {
+    font-size: 11px;
+    position: relative;
+    top: 2px;
+    z-index: 1;
+}
+.account_inbox .icon_inbox {
+    margin-left: 3px;
+}
+.account_inbox .icon_dot_notices {
+    margin-left: -14px;
+    margin-top: -14px;
+}
+.account_inbox.on .account_inbox_switch {
+    background-color: #fff;
+    border-color: #d9dadc;
+    position: relative;
+    z-index: 1;
+}
+.account_inbox_switch {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 35px;
+}
+.account_inbox_switch:hover {
+    text-decoration: none;
+}
+.account_inbox_switch i.icon_common {
+    cursor: pointer;
+    margin-top: 16px;
+    vertical-align: top;
+}
+.account_inbox_switch i.inbox {
+}
+.account_inbox_switch i.notices {
+    margin-left: -12px;
+}
+.account_message_box {
+    background-color: #fff;
+    border: 1px solid #d9dadc;
+    margin-top: -1px;
+    padding: 16px 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+.account_message_box ul {
+    width: 190px;
+}
+.account_message_box li {
+    min-height: 32px;
+}
+.account_message_link {
+    display: block;
+    line-height: 32px;
+    padding-left: 18px;
+    position: relative;
+}
+.account_message_link strong {
+    cursor: pointer;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    word-wrap: normal;
+}
+.account_message_link .read_more {
+    color: #459ae9;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 0;
+}
+.account_message_link:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+.account .account_message_link {
+    color: #8d8d8d;
+}
+.btn.btn_inbox_closed {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #fff 0px, #fff 100%);
+    border-color: #e6e7ec;
+    color: #222;
+    display: block;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 18px 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+}
+.btn.btn_inbox_closed button {
+    color: #222;
+}
+.btn.btn_inbox_closed:hover {
+    background-color: #e6e7ec;
+    background-image: linear-gradient(to bottom, #e6e7ec 0px, #e6e7ec 100%);
+    border-color: #dadbe0;
+    box-shadow: none;
+    color: #000;
+}
+.btn.btn_inbox_closed:hover button {
+    color: #222;
+}
+.btn.btn_inbox_closed:hover {
+    color: #222;
+}
+.account_logout a {
+    border-left: 1px solid #e7e7eb;
+    display: inline-block;
+    line-height: 16px;
+    margin-left: 5px;
+    margin-top: 18px;
+    padding-left: 14px;
+}
+.account_faq {
+    padding-top: 18px;
+}
+.account_faq a {
+    display: inline-block;
+}
+.logo {
+    float: left;
+    font-size: 24px;
+    /*padding-top: 10px;*/
+
+    margin: 0;padding: 0;
+
+    margin-top: 5px;
+
+    cursor: pointer;
+}
+.logo a {
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 248px;
+}
+.logo a:before {
+    content: url("./images/yajie/yajieLogo.png");
+    display: inline-block;
+
+    width: 120px;
+}
+.head .inner {
+    height: 60px;
+}
+.head .inner:after {
+    clear: both;
+    content: "​";
+    display: block;
+    height: 0;
+}
+.head .inner.wrp {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+.head_box {
+    background-color: #fff;
+    border-bottom: 1px solid #d9dadc;
+    border-top: 4px solid #44b549;
+    position: relative;
+}
+
+
+.selected{
+
+
+    background-color: #44b549;
+    color: #fff;
+}

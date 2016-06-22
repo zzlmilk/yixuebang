@@ -1,0 +1,550 @@
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <script src="http://www.liezoom.com/Public/javascript/jquery.min.js"></script>
+    
+
+    <script src="http://www.liezoom.com/Public/javascript/jquery.form.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/header.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/position.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/resume.js"></script>
+    <script src="http://www.liezoom.com/Public/javascript/interview_invite.js"></script>
+    <script src="http://www.liezoom.com/Public/javascript/hr_upload_resume.js"></script>
+    <script src="http://www.liezoom.com/Public/javascript/list.js"></script>
+    <script src="http://www.liezoom.com/Public/javascript/jquery.circliful.min.js"></script>
+    <script src="http://www.liezoom.com/Public/javascript/Chart.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/account.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/screen.js"></script>
+
+    <script src="http://www.liezoom.com/Public/javascript/task.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://www.liezoom.com/Public/css/header.css"> 
+    <link rel="stylesheet" type="text/css" href="http://www.liezoom.com/Public/css/hl_home.css">
+    <link rel="stylesheet" type="text/css" href="http://www.liezoom.com/Public/css/style1.css"> 
+    <link rel="stylesheet" type="text/css" href="http://www.liezoom.com/Public/css/list.css"> 
+    <link rel="stylesheet" type="text/css" href="http://www.liezoom.com/Public/css/style.css">
+    <link rel="stylesheet" href="http://www.liezoom.com/Public/css/hl_position.css"> 
+    <link rel="stylesheet" href="http://www.liezoom.com/Public/css/jquery.circliful.css" type="text/css" />
+    
+    <link rel="stylesheet" href="http://www.liezoom.com/Public/css/font-awesome.min.css" type="text/css" />
+    <link href="http://www.liezoom.com/Public/css/loading.css" rel="stylesheet/css" />
+
+    <!-- 待修改合并 -->
+    <link rel="stylesheet" href="http://www.liezoom.com/Public/css/homepage.css"> 
+
+    <script src="http://www.liezoom.com/Public/javascript/hirelibEngine.js"></script>
+   
+
+
+    <title></title>
+  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <body>
+
+  
+    
+
+<style type="text/css">
+.hl-position-detail-row-table tr td {
+    height: 40px;
+    width: 170px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.hl-position-detail-tip-button {
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    color: #333;
+    background: #f3f3f3;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.circle-text,
+.circle-info,
+.circle-text-half,
+.circle-info-half {
+    width: 52%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+
+.resume_detail_baseinfo_table tr td {
+    border: solid 1px none;
+}
+
+.education_experience_row_warp_div {
+    border-bottom: solid 1px #ccc;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.resume_section_title_div span {
+    font-size: 16px;
+}
+
+.resume_section_title_div img {
+    margin-right: 10px;
+    /*margin-top: 20px;*/
+}
+
+#myStat2 canvas {
+    margin-left: 45px;
+}
+
+.education_table {
+    width: 65%;
+}
+
+.education_table tr td {
+    font-size: 14px;
+    text-align: left;
+}
+
+.show-check-block {
+    position: absolute;
+    margin-left: 120px;
+    width: 260px;
+    background: rgb(145, 187, 255);
+    color: #fff;
+    padding: 5px;
+    margin-top: 30px;
+    display: none;
+}
+
+.show-check-block1 {
+    position: absolute;
+    margin-top: 31px;
+    width: 260px;
+    background: rgb(145, 187, 255);
+    color: #fff;
+    padding: 5px;
+    display: none;
+}
+
+.show-check-block2 {
+    position: absolute;
+    margin-top: 31px;
+    width: 260px;
+    background: rgb(145, 187, 255);
+    color: #fff;
+    padding: 5px;
+    display: none;
+    margin-left: 240px;
+}
+
+.language-hide {
+    display: none;
+}
+
+.resume_detail_baseinfo_table {
+    height: 165px;
+}
+
+.resume_detail_baseinfo_table tr td {
+    border: solid 1px none;
+}
+
+.resume-info-td-height {
+    height: 21px;
+}
+</style>
+<script type="text/javascript">
+$(function() {
+
+
+})
+</script>
+<div class="resume_detail_warp_div" style="margin-top:15px;width: 1000px;">
+    <!-- 简历基本信息 div row 开始-->
+    <div class="resume_detail_content_div" style="background-image: url('http://www.liezoom.com/Public/image/resume/shuiyin.png');">
+        <div style="margin-top: 5px;text-align: right;color: #888;padding-right: 20px;
+             font-size: 12px;border-bottom: solid 1px #e1e1e1;height: 40px;line-height: 40px;">
+            <span>2016.06.06&nbsp;&nbsp;由H**上传</span>
+        </div>
+        <div class="resume_detail_baseinfo_row_div">
+            <table class="resume_detail_baseinfo_table" style='text-align:left;'>
+                <tr>
+                    <td rowspan="5" style="width: 0.1%;">
+                        <div class="photo_img_div">
+                                                         <img src="https://app.noozan.com/img/default/employer_1.png" />                          </div>
+                    </td>
+                    <td class="resume-info-td-height">
+                        <div>
+                            <samp id='name'>韦先生</samp>
+                             &nbsp;&nbsp;&nbsp;&nbsp; 男   &nbsp;&nbsp;&nbsp;&nbsp;
+                            <samp id='birth'>1982年</samp>&nbsp;（34岁）    &nbsp;&nbsp;&nbsp;&nbsp; 本科                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="resume-info-td-height">
+                        <div style="white-space: nowrap;">
+                            <samp style="float: left;">
+                                 10年以上经验   &nbsp;&nbsp;&nbsp;&nbsp; 现居：北京   &nbsp;&nbsp;&nbsp;&nbsp; 预估薪资：15K*13M+1Mbonus                             </samp>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <samp class="review-grade" style="position:absolute;">
+                            </samp>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='phone' class="resume-info-td-height">
+                        <div>
+                             手机号：135*****155                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='email' class="resume-info-td-height">
+                        <div>
+                             邮箱：wei***@126.com                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                                                <div class="resume-status resume-checked1" id='resume_status_1'>
+                            已激活
+                        </div>
+                        <div class="show-check-block1">
+                            手机号码真实，求职意向已验证
+                        </div>
+                                                 <div class="resume-status resume-checked" style="margin-left: 50px;" id='resume_status_2'>
+                            已验证
+                        </div>
+                        <div class="show-check-block">
+                            sdasda
+                        </div>
+                         
+
+                        
+                            <div class="resume-status resume-checked2" id='resume_status_1' style="margin-left: 20px;">
+                                有意向
+                                </div>
+                             
+                                <div class="show-check-block2" >
+                                    候选人最近正在找工作中
+                                </div>
+
+                            
+                    </td>
+                </tr>
+            </table>
+            <div class="review_contact_div">
+                <div class="review_contact_score_div">
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <!-- 简历基本信息 div row 结束-->
+        <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0" id="wb" name="wb" width="0"></OBJECT>
+        <!-- 简历详情 社交评价 跟踪详情 众人识才服务 tab div row 开始-->
+        <div class="tab_table_div" style='border-bottom: solid 1px #e1e1e1;margin-top:-38px;'>
+        </div>
+        <div class="resume_detail_tab_div">
+            <!-- 亮点 div row 开始-->
+                        <!-- 亮点 div row 结束-->
+            <!-- tab－bar 替换内容 简历详情 -->
+            <!-- 工作经历 div row 开始-->
+                        <div class="work_experience_row_warp_div">
+                <div class="resume_section_title_div">
+                    <img src="http://www.liezoom.com/Public/image/resume/2.png" style="width: 10px;" />
+                    <span>工作经历</span>
+                </div>
+                <div style="border:solid 1px none;">
+                    <table class="hl-position-detail-row-table" style="width: 97%;">
+                                                <tr style="font-size: 15px;">
+                            <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-left: 58px;">
+                                <div>2012/05--2013/08
+                                </div>
+                                                                <div>
+                                    (1年3个月)
+                                </div>
+                                                            </td>
+                            <td style="padding-left: 25px;">
+                                <div style=" height: 28px;">
+                                                                        <span style="font-weight: bold;">
+                                                            北京立通无限科技有限公司
+                                                        </span>                                      <span style="margin-left: 40px;">
+                                                                iOS高级工程师
+                                                            </span>                                 </div>
+                                <div class="job_text" style="line-height:20px;white-space:pre-line;">
+                                    工作职责:
+1.负责公司创收项目iOS相关开发工作
+2.参与公司PE项目iOS相关开发工作
+3.参与公司其他项目iOS相关开发工作
+                                </div>
+                            </td>
+                        </tr>
+                                                <tr style="font-size: 15px;">
+                            <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-left: 58px;">
+                                <div>2011/09--2012/05
+                                </div>
+                                                                <div>
+                                    (8个月)
+                                </div>
+                                                            </td>
+                            <td style="padding-left: 25px;">
+                                <div style=" height: 28px;">
+                                                                        <span style="font-weight: bold;">
+                                                            北京友朋互动科技有限公司
+                                                        </span>                                      <span style="margin-left: 40px;">
+                                                                iOS高级工程师
+                                                            </span>                                 </div>
+                                <div class="job_text" style="line-height:20px;white-space:pre-line;">
+                                    工作职责:
+负责第一配项目客户端开发工作
+                                </div>
+                            </td>
+                        </tr>
+                                                <tr style="font-size: 15px;">
+                            <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-left: 58px;">
+                                <div>2010/04--2011/09
+                                </div>
+                                                                <div>
+                                    (1年5个月)
+                                </div>
+                                                            </td>
+                            <td style="padding-left: 25px;">
+                                <div style=" height: 28px;">
+                                                                        <span style="font-weight: bold;">
+                                                            北京亮点时间科技有限公司
+                                                        </span>                                      <span style="margin-left: 40px;">
+                                                                iOS开发工程师
+                                                            </span>                                 </div>
+                                <div class="job_text" style="line-height:20px;white-space:pre-line;">
+                                    工作职责:
+负责公司多个项目iOS客户端的开发工作
+                                </div>
+                            </td>
+                        </tr>
+                                                <tr style="font-size: 15px;">
+                            <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-left: 58px;">
+                                <div>2006/07--2010/04
+                                </div>
+                                                                <div>
+                                    (3年9个月)
+                                </div>
+                                                            </td>
+                            <td style="padding-left: 25px;">
+                                <div style=" height: 28px;">
+                                                                        <span style="font-weight: bold;">
+                                                            北京红旗中文贰仟软件技术有限公司
+                                                        </span>                                      <span style="margin-left: 40px;">
+                                                                软件工程师
+                                                            </span>                                 </div>
+                                <div class="job_text" style="line-height:20px;white-space:pre-line;">
+                                    工作职责:	负责OpenOffice.org开源社区chart2图表项目开发
+                                </div>
+                            </td>
+                        </tr>
+                                            </table>
+                </div>
+                <div style=" height:5px;"></div>
+            </div>
+                        <!-- 工作经历 div row 结束-->
+            <!-- 项目经验 div row 开始-->
+                        <div class="project_experience_row_warp_div">
+                <div class="resume_section_title_div">
+                    <img src="http://www.liezoom.com/Public/image/resume/2.png" style="width: 10px;" />
+                    <span>项目经验</span>
+                </div>
+                <table class="hl-position-detail-row-table" style="width: 97%; margin-top: -10px;">
+                                        <input type="hidden" class="project_experience_empty" value="111" />                      <tr style="font-size: 15px;">
+                        <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-top: 10px;padding-left: 58px;">
+                            <div>2012/05--2012/10</div>
+                                                    </td>
+                        <td style="padding-left: 35px;">
+                            <div style="padding-top: 10px;">
+                                                                <span style="display: block;white-space: nowrap;overflow: hidden; height: 30px;font-weight: bold;">
+                                                                    项目名称: enote项目
+                                                                </span>                             </div>
+                            <div style="clear: both;"></div>
+                                                        <div class="project-describe-clear" style="white-space:pre-line; margin-top: -2px;">
+                                <!-- 项目描述:  -->
+                                所在公司:北京立通无限科技有限公司 
+项目职务:iOS客户端开发 
+项目描述:enote是一款云笔记运用。应用支持文字，图片，语音，视频等数据类型，用户可以随时随地通过客户端或网站记录笔记内容，并自动同步到云端。之后无论通过哪个平台登录相同账号，改账号内的笔记将自动更新到当前平台，实现资讯的无缝对接 
+项目职责:负责该项目iOS客户端的开发工作 
+项目业绩:完成该项目开发并提交上线 
+
+                            </div>
+                                                    </td>
+                    </tr>
+                                        <tr style="font-size: 15px;">
+                        <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-top: 10px;padding-left: 58px;">
+                            <div>2011/09--2012/05</div>
+                                                    </td>
+                        <td style="padding-left: 35px;">
+                            <div style="padding-top: 10px;">
+                                                                <span style="display: block;white-space: nowrap;overflow: hidden; height: 30px;font-weight: bold;">
+                                                                    项目名称: 第一配
+                                                                </span>                             </div>
+                            <div style="clear: both;"></div>
+                                                        <div class="project-describe-clear" style="white-space:pre-line; margin-top: -2px;">
+                                <!-- 项目描述:  -->
+                                所在公司:北京友朋互动科技有限公司 
+项目职务:客户端开发主管 
+项目描述:第一配是一款跨平台的基于LBS的社交应用。用户通过注册登录后，可根据设定的条件，搜索附近好友并进行互动，包括文字或语音聊天等。同时应用支持礼物系统，可以对感兴趣的好友赠送礼物，提高自己和对方的魅力值 
+项目职责:负责该项目客户端开发及2.0版本的产品设计工作 
+项目业绩:根据产品需求，密切配合相关部门，完成该项目iOS客户端各个版本的开发。参与项目2.0版的产品设计，完成该版本UE设计 
+
+                            </div>
+                                                    </td>
+                    </tr>
+                                        <tr style="font-size: 15px;">
+                        <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-top: 10px;padding-left: 58px;">
+                            <div>2010/11--2011/3</div>
+                                                    </td>
+                        <td style="padding-left: 35px;">
+                            <div style="padding-top: 10px;">
+                                                                <span style="display: block;white-space: nowrap;overflow: hidden; height: 30px;font-weight: bold;">
+                                                                    项目名称: 软件游戏猎手
+                                                                </span>                             </div>
+                            <div style="clear: both;"></div>
+                                                        <div class="project-describe-clear" style="white-space:pre-line; margin-top: -2px;">
+                                <!-- 项目描述:  -->
+                                所在公司:北京亮点时间科技有限公司 
+项目职务:iOS客户端开发 
+项目描述:软件游戏猎手是一款为iOS用户收集、整理、推荐最新最热门的软件及游戏的应用。该应用已拥有客观的用户群体 
+项目职责:负责该项目iOS客户端升级及维护 
+项目业绩:完成该项目开发 
+
+                            </div>
+                                                    </td>
+                    </tr>
+                                        <tr style="font-size: 15px;">
+                        <td style=" width: 22%;text-align: left;vertical-align: -webkit-baseline-middle;padding-top: 10px;padding-left: 58px;">
+                            <div>2010/05--2010/10</div>
+                                                    </td>
+                        <td style="padding-left: 35px;">
+                            <div style="padding-top: 10px;">
+                                                                <span style="display: block;white-space: nowrap;overflow: hidden; height: 30px;font-weight: bold;">
+                                                                    项目名称: MHub项目
+                                                                </span>                             </div>
+                            <div style="clear: both;"></div>
+                                                        <div class="project-describe-clear" style="white-space:pre-line; margin-top: -2px;">
+                                <!-- 项目描述:  -->
+                                所在公司:北京亮点时间科技有限公司 
+项目职务:iOS客户端开发 
+项目描述:M-Hub项目是为澳洲电信开发的一套基于LBS的类似大众点评的系统。用户可通过客户端查看附近的，或搜索感兴趣的商家，查看其详细信息，可以对该商家的产品及服务进行评价，并可通过推送通知及时获取该商家最新的优惠资讯 
+项目职责:负责该项目iOS客户端开发 
+项目业绩:完成该项目开发并提交上线 
+                            </div>
+                                                    </td>
+                    </tr>
+                                    </table>
+                <div style=" height:5px;"></div>
+            </div>
+            <!-- 项目经验 div row 结束-->
+                        <!-- 教育经历 div row 开始-->
+                        <div class="education_experience_row_warp_div">
+                <div class="resume_section_title_div">
+                    <img src="http://www.liezoom.com/Public/image/resume/2.png" style="width: 10px;" />
+                    <span>教育经历</span>
+                </div>
+                <div class="workexperience_row_warp_div" style="margin-left: 56px;">
+                                        <input type="hidden" class="education_experience_empty" value="111" />                     <table class="education_table" style="margin-left:12px;">
+                        <!--                             <input type="hidden" class="education_experience_empty" value="Array" /> 
+                                                                        -->
+                                                <tr>
+                            <td style="width: 167px;">2002/09--2006/07</td>
+                            <td>中央民族大学</td>
+                            <td>计算机科学与技术</td>
+                            <td>本科</td>
+                        </tr>
+                                            </table>
+                </div>
+                <div style=" height:5px;"></div>
+            </div>
+                         <!-- 个人技能 结束 -->
+            <div style="clear:both"></div>
+                        <!-- 证书 开始 -->
+            <div class="certificates-kill-div certificate_row_warp_div" style="border-bottom: solid 1px #e1e1e1;">
+                <div class="resume_section_title_div" style="">
+                    <img src="http://www.liezoom.com/Public/image/resume/2.png" style="margin-left: 10px; width: 10px;" />
+                    <span>证书</span>
+                </div>
+                                <input type="hidden" class="certificate_empty" value="111" />                 <table class="hl-position-detail-row-table" style="margin-left: 56px;">
+                    <tr>
+                        <td style="width: 100%;" class="certificates-empty-text">
+                                                        <button class="hl-position-detail-tip-button">
+                                高级工程师
+                            </button>
+                                                    </td>
+                    </tr>
+                </table>
+                <div style="clear:both"></div>
+            </div>
+                        <!--证书 结束 -->
+            <!-- 底部按钮功能区 div row 开始-->
+            <div class="button_function_row_div" style="height: 30px;">
+            </div>
+            <div class="resume-review-section">
+                <style type="text/css">
+                .review-table {
+                    border: none;
+                }
+                
+                .review-table tr td {
+                    padding: 0px;
+                    font-size: 14px;
+                }
+                </style>
+                                <table class="review-table">
+                                        <tr>
+                        <td style="width: 13%;vertical-align: sub; padding-left: 20px;padding-top: 10px;">
+                            E****
+                        </td>
+                        <td style="width: 72%; padding-left: 15px;line-height: 22px;text-align: left;">
+                            <div style="height: 35px;padding-top: 10px;">
+                                <span>
+                                                                                            2016-06-06
+                                                                                        </span>
+                                <span>
+                                                                                            <img style="margin-left: 5px; width: 110px;" src="http://www.liezoom.com/Public/image/star/star5.png" />
+                                                                                        </span>
+                            </div>
+                            <div style="height: 35px;">
+                                985高校本科毕业，10年的ios开发经验，高级开发工程师，现在尚品网（兄弟公司），担任客户端开发，目前也在看机会
+                            </div>
+                        </td>
+                    </tr>
+                                    </table>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+        $(".project-describe-clear").each(function(){
+          var newData1 = $(this).text().trim();
+          $(this).text(newData1); 
+        })
+
+        $(".job_text").each(function(){
+          var newData2 = $(this).text().trim();
+          $(this).text(newData2); 
+        })
+</
