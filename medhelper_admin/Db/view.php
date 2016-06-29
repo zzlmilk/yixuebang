@@ -72,6 +72,7 @@ class view {
 
         $this->smarty->assign('MAINPUBLIC', MAINPUBLIC);
 
+        $this->smarty->assign('FOOTERURL',FOOTERURL);
 
         $this->smarty->assign('WEBSITEPUBLIC', WebSiteUrl . '/public/' . $_ENV['DIR']);
 

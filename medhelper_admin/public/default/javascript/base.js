@@ -1,5 +1,7 @@
 var check = 0
 
+var formData = new FormData;
+
 function base() {
 
 
@@ -7,7 +9,7 @@ function base() {
 
 base.prototype.getDomainUrl = function() {
 
-    return 'http://localhost/medhelper_admin';
+    return 'http://localhost/yixuebang/medhelper_admin';
 
 }
 
@@ -57,6 +59,54 @@ base.prototype.getMainType = function(type) {
     var formData = new FormData();
 
     formData.append('belog_type', type);
+
+    base.ajax(url, 'post', formData, function success(data) {
+
+        $('body').append(data)
+
+        $('#mainTypeModal').modal();
+
+    }, function error(error) {
+
+
+    })
+
+};
+
+base.prototype.addType = function(type, level) {
+
+    var url = base.getDomainUrl() + '/pageredirst.php?action=ajax&functionname=add_type';
+
+    var formData = new FormData();
+
+    formData.append('belog_type', type);
+
+    formData.append('level', level);
+
+    base.ajax(url, 'post', formData, function success(data) {
+
+        base.removeMainType('mainTypeModal');
+
+        $('body').append(data)
+
+        $('#mainTypeModal').modal();
+
+    }, function error(error) {
+
+
+    })
+
+}
+
+base.prototype.getType = function(type, level) {
+
+    var url = base.getDomainUrl() + '/pageredirst.php?action=ajax&functionname=getType';
+
+    var formData = new FormData();
+
+    formData.append('belog_type', type);
+
+    formData.append('level', level);
 
     base.ajax(url, 'post', formData, function success(data) {
 
@@ -189,6 +239,76 @@ base.prototype.saveMainType = function(type) {
     }
 };
 
+base.prototype.saveType = function(type, level) {
+
+    var add_name = $('#name').val();
+
+    var formData = new FormData;
+
+    var i = 0;
+
+    if (level == 1) {
+
+        var img_file = document.getElementById('img_file').files[0];
+
+        if (base.checkImg('img_file', 1)) {
+
+            formData.append('img_file', img_file)
+
+            i++;
+
+        } else {
+
+            if (level != 1) {
+
+                i++;
+            }
+        }
+        
+    } else{
+
+        i++;
+    }
+
+    formData.append('type', type)
+
+    formData.append('level', level)
+
+    if (add_name) {
+
+        i++;
+
+        $('#name_error').html('');
+
+        formData.append('name', add_name)
+
+    } else {
+
+        $('#name_error').html('分类名称必须填写');
+    }
+
+    if (i == 2) {
+
+        var url = base.getDomainUrl() + '/pageredirst.php?action=ajax&functionname=add_type_ajax';
+
+        base.ajax(url, 'post', formData, function success(data) {
+
+            base.removeMainType('mainTypeModal');
+
+            base.getType(type, level)
+
+
+        }, function error(error) {
+
+
+        })
+
+    }
+
+
+}
+
+
 base.prototype.submitMainType = function() {
 
     var main_type_id = $('input[name="inlineRadioOptions"]:checked ').val();
@@ -205,11 +325,44 @@ base.prototype.submitMainType = function() {
 
 };
 
+base.prototype.jumpSymptom = function(first_argument) {
+    
+    var url = 'pageredirst.php?action=symptom&functionname=add_symptom_info';
+
+    window.location.href = url;
+
+};
+
 base.prototype.jumpAddShop = function() {
 
     var url = 'pageredirst.php?action=shop&functionname=addShop';
 
     window.location.href = url;
+};
+
+base.prototype.jumpChannel = function() {
+
+    var url = 'pageredirst.php?action=channel&functionname=add_channel_info';
+
+    window.location.href = url;
+
+};
+
+base.prototype.jumpCollge = function() {
+
+    var url = 'pageredirst.php?action=college&functionname=add_college_info';
+
+    window.location.href = url;
+
+};
+
+
+base.prototype.jumpDoctor = function() {
+
+    var url = 'pageredirst.php?action=doctor&functionname=add_doctor_info';
+
+    window.location.href = url;
+
 };
 
 base.prototype.setShopValue = function() {
@@ -320,8 +473,6 @@ base.prototype.setErrorInfo = function(data) {
 
     if (data['logo']) {
 
-        i++;
-
         filepath = data['logo'].name;
 
         var extStart = filepath.lastIndexOf('.');
@@ -335,6 +486,8 @@ base.prototype.setErrorInfo = function(data) {
         } else {
 
             $('#logo_error').html('');
+
+            i++;
         }
 
     } else {
@@ -376,7 +529,7 @@ base.prototype.submitShop = function() {
 
         for (var i in data) {
 
-            if(data[i]){
+            if (data[i]) {
 
                 formData.append(i, data[i])
             }
@@ -399,5 +552,104 @@ base.prototype.submitShop = function() {
 
 };
 
+//file_name  文件对象     is_img_file_check  int 1时候 代表需要验证图片格式 否则 不验证 是判断非空 
+
+base.prototype.checkImg = function(file_name, is_img_file_check, type) {
+
+    var img_file = document.getElementById(file_name).files[0];
+
+    if (img_file) {
+
+        filepath = img_file.name;
+
+        if (is_img_file_check == 1) {
+
+            var extStart = filepath.lastIndexOf('.');
+
+            var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+
+            if (ext != '.BMP' && ext != '.PNG' && ext != '.GIF' && ext != '.JPG' && ext != '.JPEG') {
+
+                $('#' + file_name + '_error').html('封面图限于png, gif, jpeg, jpg格式');
+
+                return false;
+
+            } else {
+
+                $('#' + file_name + '_error').html('');
+
+                return true;
+            }
+
+        } else {
+
+            return true;
+        }
+
+    } else {
+
+        if (type != 1) {
+
+            $('#' + file_name + '_error').html('图片必须上传');
+        }
+
+        return false;
+
+    }
+};
+
+base.prototype.checkString = function(string, is_check, error_info) {
+
+    var values = $('#' + string).val();
+
+    if (values && values != '') {
+
+        $('#' + string + '_error').html('');
+
+        if (is_check == 1) {
+
+            if (!isNaN(values) && values > 0) {
+
+                return true;
+
+            } else {
+
+                $('#' + string + '_error').html('请输入数字格式或数字大于0');
+            }
+
+        } else {
+
+            return true;
+        }
+
+    } else {
+
+        $('#' + string + '_error').html(error_info);
+
+        return false;
+    }
+
+};
+
+base.prototype.checkSession = function(string, value, error_info) {
+
+    var values = sessionStorage.getItem(string);
+
+    console.log(values)
+
+    if (values) {
+
+        $('#' + value + '_error').html('');
+
+        return true;
+
+    } else {
+
+        $('#' + value + '_error').html(error_info);
+
+        return false;
+    }
+
+};
 
 var base = new base();

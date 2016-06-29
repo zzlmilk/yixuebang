@@ -70,6 +70,7 @@
 
         <button type="submit" class="btn btn-default" onclick='base.submitShop()'>Submit</button>
 
+        <button type="submit" class="btn btn-default" onclick='base.preview("shop_describe")'>预览</button>
     </div>
 
     <div style='height:50px;'></div>

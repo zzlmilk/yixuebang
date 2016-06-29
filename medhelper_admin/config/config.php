@@ -8,7 +8,7 @@ defined('ROOTPATH') or define('ROOTPATH', getcwd());
 
 defined('project') or define('project', 'medhelper_admin');
 
-defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/' . project);
+defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yixuebang/' . project);
 
 defined('FOOTBASIC') or define('FOOTBASIC', ROOTPATH . '/Db/');
 
@@ -17,6 +17,8 @@ defined('FOOTCLASS') or define('FOOTCLASS', ROOTPATH . '/Model/');
 defined('MAINACTION') or define('MAINACTION', ROOTPATH . '/Lib/');
 
 defined('environment') or define('environment', 'produce');
+
+defined('FOOTERURL') or define('FOOTERURL', 'http://' . $_SERVER['HTTP_HOST'] . '/yixuebang/');
 
 
 defined('MAINPUBLIC') or define('MAINPUBLIC', WebSiteUrl . '/public/default');

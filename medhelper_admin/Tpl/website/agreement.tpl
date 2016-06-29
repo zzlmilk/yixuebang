@@ -35,5 +35,3 @@
 <button type="submit" class="btn btn-default" onclick='base.edit()'>编辑文章</button>
 
 {include file="../public/_preview.tpl"}
-
-{include file="../public/_reader.tpl"} 

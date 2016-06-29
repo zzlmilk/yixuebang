@@ -13,17 +13,17 @@
 </head>
 
 <body class='boby' style='min-height:500px;overflow:auto'>
-    <div class='bobyBackGroud' style='overflow:hidden'>
+    <div class='bobyBackGroud' style=''>
         <div style='overflow: hidden; height: 86px;'>
             {include file='top.tpl'}
         </div>
         <div style='  background-color: #fff;
-    border: 1px solid #d9dadc;height: 750px; width: 1250px ; margin: 0 auto;overflow:hidden'>
-            <div style='float: left; overflow: hidden; height: 750px; width: 16%;font-weight: bold;border-right: 1px solid #e7e7eb;'>
-                <iframe frameborder='0' src="{$WEBSITEURL}/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 740px; width: 196px; {*margin-left: 5px;*}'></iframe>
+    border: 1px solid #d9dadc;height: 950px; width: 1250px ; margin: 0 auto;overflow:auto'>
+            <div style='float: left; overflow: hidden; height: 1000px; width: 16%;font-weight: bold;border-right: 1px solid #e7e7eb;'>
+                <iframe frameborder='0' src="{$WEBSITEURL}/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 1000px; width: 196px; {*margin-left: 5px;*}'></iframe>
             </div>
             <div style='float: left;height: 900px; width: 83%; margin-left: 3px'>
-                <iframe frameborder='0' src="{$WEBSITEPUBLIC}/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 750px; width: 100%; border-radius: 10px 10px 0 0; overflow:auto;'></iframe>
+                <iframe frameborder='0' src="{$WEBSITEPUBLIC}/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 1000px; width: 100%; border-radius: 10px 10px 0 0; overflow:auto;'></iframe>
             </div>
         </div>
     </div>

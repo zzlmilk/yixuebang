@@ -1,0 +1,98 @@
+a:link {
+    color: black
+}
+
+
+/* 未访问的链接 */
+
+a:visited {
+    color: black
+}
+
+
+/* 已访问的链接 */
+
+a:hover {
+    color: black
+}
+
+
+/* 鼠标移动到链接上 */
+
+a:active {
+    color: black
+}
+
+*{
+
+    font-size: 18px;
+}
+
+
+/* 选定的链接 */
+
+.left {
+    float: left;
+}
+
+.both {
+    clear: both;
+}
+
+.width-4 {
+    width: 20%;
+    margin-left: 10px;
+    color: white;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    font-size: 13px;
+}
+
+.footer {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-list {
+    background-color: rgb(140, 156, 171)
+}
+
+.label {
+   
+    height: 40px;
+
+    line-height: 40px;
+
+    width: 22%;
+
+    color: white;
+
+    font-size: 13px;
+
+    background-color: rgb(140, 156, 171);
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    overflow: hidden;
+
+}
+
+.content img {
+
+    max-width: 100%;
+
+    vertical-align: middle;
+}

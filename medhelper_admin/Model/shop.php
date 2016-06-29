@@ -2,7 +2,7 @@
 
 class shopModel extends BaseModel {
 
-    private $upload_file_path = '/var/www/html/medhelper/public';
+    private $upload_file_path = '/var/www/html/yixuebang/medhelper/public/image/shop/';
 
     public function __construct($shop_id = 0) {
 
@@ -134,7 +134,7 @@ class shopModel extends BaseModel {
 
             $file_content_name = time().rand(1,9999).'.'.$suffix_new;
 
-            move_uploaded_file($_FILES['shop_content']['tmp_name'],$this->upload_file_path.'/file/'.$file_name);
+            move_uploaded_file($_FILES['shop_content']['tmp_name'],$this->upload_file_path.'/file/'.$file_content_name);
 
             $this->set('shop_content',$file_content_name);
 

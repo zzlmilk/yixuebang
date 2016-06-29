@@ -20,9 +20,7 @@
                     </div>
                     <button type="submit" class="btn btn-default" onclick='base.saveMainType({$type})'>保存</button>
                 </div>
-
                 <div style='height:10px;'>&nbsp;</div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" onclick='base.submitMainType()'>确定</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
