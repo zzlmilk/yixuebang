@@ -16,6 +16,8 @@ defined('FOOTCLASS') or define('FOOTCLASS', ROOTPATH . '/Model/');
 
 defined('MAINACTION') or define('MAINACTION', ROOTPATH . '/Lib/');
 
+defined('STATICHTML') or define('STATICHTML', '/var/www/html/yixuebang/medhelper/Public/html');
+
 defined('environment') or define('environment', 'produce');
 
 defined('FOOTERURL') or define('FOOTERURL', 'http://' . $_SERVER['HTTP_HOST'] . '/yixuebang/');

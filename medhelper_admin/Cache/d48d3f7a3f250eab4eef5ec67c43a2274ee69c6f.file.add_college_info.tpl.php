@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:15:30
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:00:42
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_college_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:80584487057724e4297e4c6-84349617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:73839033577347eae59ae1-72437860%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd48d3f7a3f250eab4eef5ec67c43a2274ee69c6f' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_college_info.tpl',
-      1 => 1467108586,
+      1 => 1467172811,
     ),
   ),
-  'nocache_hash' => '80584487057724e4297e4c6-84349617',
+  'nocache_hash' => '73839033577347eae59ae1-72437860',
   'function' => 
   array (
   ),
@@ -37,7 +37,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -56,11 +56,11 @@ $_smarty_tpl->decodeProperties(array (
 
         } else {
 
-            var prov = '湖南'
+            var prov = '北京'
 
-            var city = '长沙'
+            // var city = '长沙'
 
-            var dist = '岳麓区'
+            // var dist = '岳麓区'
         }
 
         $("#citySelect").citySelect({

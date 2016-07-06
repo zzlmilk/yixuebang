@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:02:53
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:04:19
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_medical_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:180937472257724b4d6ee616-97545086%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1062040367577348c36ffe31-23007888%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd5df50eedd3ce548f71fd2a6c48e0481cbf4b40f' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_medical_info.tpl',
-      1 => 1467108142,
+      1 => 1467172829,
     ),
   ),
-  'nocache_hash' => '180937472257724b4d6ee616-97545086',
+  'nocache_hash' => '1062040367577348c36ffe31-23007888',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,7 +51,7 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">急诊知识一级分类(如常见急症)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -59,8 +59,6 @@ $_smarty_tpl->decodeProperties(array (
 
                     var type_id_1 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_id_1'];?>
 '
-
-                    alert(type_id_1)
 
 
                     sessionStorage.setItem("type_id_1", type_id_1);
@@ -76,7 +74,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">急诊知识二级分类(如发烧)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -110,6 +108,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
         <button type="submit" class="btn btn-default" onclick='medical.submitInfo(<?php echo $_smarty_tpl->getVariable('operation_type')->value;?>
 )'>保存</button>
+        <button type="submit" class="btn btn-default" onclick='base.preview("article_content")'>预览</button>
     </div>
     <div style='height:50px;'></div>
 </body>

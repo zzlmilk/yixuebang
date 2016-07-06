@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-27 17:46:17
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:01:10
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_diseases_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6000576785770f5e946f970-88028863%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:59081996357734806cf7d53-01294054%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3f6db8d7053b4ebd3d6546ed3abb6e01412642f3' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_diseases_info.tpl',
-      1 => 1467020736,
+      1 => 1467172816,
     ),
   ),
-  'nocache_hash' => '6000576785770f5e946f970-88028863',
+  'nocache_hash' => '59081996357734806cf7d53-01294054',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,13 +51,13 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">疾病知识一级分类(如内科系疾病)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
                 $(function() {
 
-                    var type_id_1 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_1_id'];?>
+                    var type_id_1 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_id_1'];?>
 '
 
                     sessionStorage.setItem("type_id_1", type_id_1);
@@ -73,13 +73,13 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">疾病知识二级分类(如呼吸内科)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
                 $(function() {
 
-                    var type_id_2 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_2_id'];?>
+                    var type_id_2 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_id_2'];?>
 '
 
                     sessionStorage.setItem("type_id_2", type_id_2);
@@ -95,13 +95,13 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">疾病知识三级分类(如上呼吸道与气管疾病)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
                 $(function() {
 
-                    var type_id_3 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_3_id'];?>
+                    var type_id_3 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_id_3'];?>
 '
 
                     sessionStorage.setItem("type_id_3", type_id_3);
@@ -117,13 +117,13 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">四级分类</label>
+            <label for="college_type">疾病知识四级分类(如支气管肺炎)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
                 $(function() {
 
-                    var type_id_4 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_4_id'];?>
+                    var type_id_4 = '<?php echo $_smarty_tpl->getVariable('data')->value['type_id_4'];?>
 '
 
                     sessionStorage.setItem("type_id_4", type_id_4);
@@ -151,6 +151,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
         <button type="submit" class="btn btn-default" onclick='diseases.submitInfo(<?php echo $_smarty_tpl->getVariable('operation_type')->value;?>
 )'>保存</button>
+        <button type="submit" class="btn btn-default" onclick='base.preview("article_content")'>预览</button>
     </div>
     <div style='height:50px;'></div>
 </body>

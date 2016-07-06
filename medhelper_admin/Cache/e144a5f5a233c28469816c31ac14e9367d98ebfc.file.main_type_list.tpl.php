@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-22 15:40:10
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:01:22
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/main_type_list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2009667921576a40da1a1a28-08171112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:974270876577348121eb833-15952726%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e144a5f5a233c28469816c31ac14e9367d98ebfc' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/main_type_list.tpl',
-      1 => 1466152842,
+      1 => 1467021864,
     ),
   ),
-  'nocache_hash' => '2009667921576a40da1a1a28-08171112',
+  'nocache_hash' => '974270876577348121eb833-15952726',
   'function' => 
   array (
   ),
@@ -47,9 +47,7 @@ if (count($_from) > 0){
                     <button type="submit" class="btn btn-default" onclick='base.saveMainType(<?php echo $_smarty_tpl->getVariable('type')->value;?>
 )'>保存</button>
                 </div>
-
                 <div style='height:10px;'>&nbsp;</div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" onclick='base.submitMainType()'>确定</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

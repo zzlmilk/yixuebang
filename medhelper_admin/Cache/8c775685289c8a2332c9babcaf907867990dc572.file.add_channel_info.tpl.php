@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:15:16
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:02:05
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_channel_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:109778074557724e34dcfba5-21219226%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15531891075773483d7249e7-25979905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8c775685289c8a2332c9babcaf907867990dc572' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_channel_info.tpl',
-      1 => 1467108898,
+      1 => 1467172794,
     ),
   ),
-  'nocache_hash' => '109778074557724e34dcfba5-21219226',
+  'nocache_hash' => '15531891075773483d7249e7-25979905',
   'function' => 
   array (
   ),
@@ -32,7 +32,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -44,7 +44,6 @@ $_smarty_tpl->decodeProperties(array (
 
 <body>
     <div style='margin-top: 30px;margin-left: 20px; overflow: auto;min-height: 700px;'>
-
         <input type='hidden' id='id' name='id' value='<?php echo $_smarty_tpl->getVariable('data')->value['id'];?>
 '>
 

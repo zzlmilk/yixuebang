@@ -10,7 +10,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -22,7 +22,6 @@
 
 <body>
     <div style='margin-top: 30px;margin-left: 20px; overflow: auto;min-height: 700px;'>
-
         <input type='hidden' id='id' name='id' value='{$data.id}'>
 
         <div class="form-group">

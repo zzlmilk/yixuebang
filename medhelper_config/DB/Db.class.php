@@ -153,7 +153,7 @@ class Db {
 
             foreach ($data as $k => $v) {
 
-                $set[] = '"' . trim($k) . '"' . '=' . "'" . $this->makeStringDBSafe($v) . "'";
+                $set[] = '' . trim($k) . '' . '=' . "'" . $this->makeStringDBSafe($v) . "'";
             }
         }
 
@@ -183,7 +183,7 @@ class Db {
     public function update($option) {
 
         $sql = 'UPDATE '
-                . '"' . $this->parseTable($option['table']) . '"'
+                . '' . $this->parseTable($option['table']) . ''
                 . $this->parseSet($option['update'])
                 . $this->parseWhere(!empty($option['where']) ? $option['where'] : '')
                 . $this->parseOrder(!empty($option['order']) ? $option['order'] : '')

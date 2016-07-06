@@ -2,9 +2,24 @@
 
 class configAction {
 
+
+	public function baiduAccount(){
+
+		$_ENV['smarty']->display('baidu_account');
+
+	}
+
+
+	public function setAdminPassword(){
+
+		$_ENV['smarty']->display('set_admin_password');
+
+	}
+
+
 	public function agreement() {
 
-		$agreement_file_content = '/var/www/html/medhelper/public/agreement.html';
+		$agreement_file_content = STATICHTML.'/agreement.html';
 
 		$agreement_html = file_get_contents( $agreement_file_content, $content );
 
@@ -20,7 +35,7 @@ class configAction {
 
 		if ( !empty( $content ) ) {
 
-			$agreement_file_content = '/var/www/html/medhelper/public/agreement.html';
+			$agreement_file_content = STATICHTML.'/agreement.html';
 
 			file_put_contents( $agreement_file_content, $content );
 
@@ -48,7 +63,7 @@ class configAction {
 
 	public function introduce() {
 
-		$content = '/var/www/html/medhelper/public/introduce.html';
+		$content = STATICHTML.'/introduce.html';
 
 		if ( file_exists( $content ) ) {
 
@@ -70,7 +85,7 @@ class configAction {
 
 		if ( !empty( $content ) ) {
 
-			$agreement_file_content = '/var/www/html/medhelper/public/introduce.html';
+			$agreement_file_content = STATICHTML.'/introduce.html';
 
 			file_put_contents( $agreement_file_content, $content );
 
@@ -97,7 +112,7 @@ class configAction {
 
 	public function contact(){
 
-		$content = '/var/www/html/medhelper/public/contact.html';
+		$content = STATICHTML.'/contact.html';
 
 		if ( file_exists( $content ) ) {
 
@@ -118,7 +133,7 @@ class configAction {
 
 		if ( !empty( $content ) ) {
 
-			$agreement_file_content = '/var/www/html/medhelper/public/contact.html';
+			$agreement_file_content = STATICHTML.'/contact.html';
 
 			file_put_contents( $agreement_file_content, $content );
 
@@ -139,6 +154,34 @@ class configAction {
 		}
 
 		echo json_encode( $array );
+
+		die;
+	}
+
+	public function set_password_ajax(){
+
+		$new_password = $_REQUEST['new_password'];
+
+		$repeat_password = $_REQUEST['repeat_password'];
+
+		if($new_password != $repeat_password){
+
+			echo -1;
+
+		} else{
+
+			$user_id = $_SESSION['medhelper_admin_id'];
+
+			$update = array(
+
+				'admin_password'=>md5($new_password)
+
+			);
+
+			M('medhelper_admin')->where("id = ".$user_id)->save($update);
+
+			echo 1;
+		}
 
 		die;
 	}

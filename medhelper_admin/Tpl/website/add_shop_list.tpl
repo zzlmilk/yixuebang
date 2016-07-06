@@ -9,7 +9,7 @@
 
         $('#shop_describe').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -50,14 +50,14 @@
 
         <div class="form-group">
             <label for="logo">封面图</label>
-            <input id='logo' name='logo' type="file" class="btn-primary"> 
+            <input id='logo' name='logo' type="file" > 
 
             <p style='color: red;font-size: 14px;' id='logo_error'></p> 
         </div>
 
         <div class="form-group">
             <label for="shop_content">商品附件</label>
-            <input id='shop_content' name='shop_content' type="file" class="btn-primary">  
+            <input id='shop_content' name='shop_content' type="file" >  
 
             <p style='color: red;font-size: 14px;' id='shop_content_error'></p> 
         </div>

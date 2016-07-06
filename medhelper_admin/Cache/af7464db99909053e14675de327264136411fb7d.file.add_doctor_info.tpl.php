@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:19:42
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:01:01
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_doctor_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:200331879357724f3ec29086-89370018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1717748661577347fdd230c2-27806785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'af7464db99909053e14675de327264136411fb7d' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_doctor_info.tpl',
-      1 => 1467108594,
+      1 => 1467172821,
     ),
   ),
-  'nocache_hash' => '200331879357724f3ec29086-89370018',
+  'nocache_hash' => '1717748661577347fdd230c2-27806785',
   'function' => 
   array (
   ),
@@ -37,7 +37,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 

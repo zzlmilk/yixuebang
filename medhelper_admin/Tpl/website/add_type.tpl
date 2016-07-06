@@ -12,7 +12,7 @@
                         <input type="text" class="form-control" id="name" placeholder="请输入分类名称" style='width:100%;'>
                         <p style='color: red;font-size: 14px;' id='name_error'></p>
                     </div>
-                    {if $level == 1}
+                    {if $level == 1 || $level == 2}
                     <div class="form-group">
                         <label for="img_file">分类缩略图</label>
                         <input id='img_file' name='img_file' type="file" >

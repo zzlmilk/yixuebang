@@ -13,7 +13,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -29,11 +29,11 @@
 
         } else {
 
-            var prov = '湖南'
+            var prov = '北京'
 
-            var city = '长沙'
+            // var city = '长沙'
 
-            var dist = '岳麓区'
+            // var dist = '岳麓区'
         }
 
         $("#citySelect").citySelect({

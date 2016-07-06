@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:28:57
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:04:15
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_operation_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:163257341157725169414650-06370509%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1758680987577348bf2b0407-10068208%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ba4e8f8ebe6aeb40e409e74c154ea6048fdade46' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_operation_info.tpl',
-      1 => 1467108723,
+      1 => 1467172831,
     ),
   ),
-  'nocache_hash' => '163257341157725169414650-06370509',
+  'nocache_hash' => '1758680987577348bf2b0407-10068208',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,7 +51,7 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">手术知识一级分类(如常见手术知识)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -73,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">手术知识二级分类(如心胸外科)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -95,7 +95,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">手术知识三级分类(如硬脊膜外脓肿手术)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>

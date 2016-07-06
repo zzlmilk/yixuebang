@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta content="target-densitydpi=device-dpi,width=640" name="viewport">
     <meta name="format-detection" content="email=no,address=no,telephone=no">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="{$WebSiteUrlPublic}/css/bootstrap/css/jquery.js"></script>
+
+
     <link rel="stylesheet" href="{$WebSiteUrlPublic}/css/shop.css">
     <script src="{$WebSiteUrlPublic}/javascript/base.js"></script>
 
@@ -47,7 +52,7 @@
               
                 <section class="play-bts">
                     <div class="bd">
-                        <div style='background-color:#00c7ff' class="trade bt-c on" data-money='{$shop_info.shop_price}' data-id='{$shop_info.id}' onclick="payS.buy(this)">立即购买</div>
+                        <div style='background-color:#00c7ff' class="trade bt-c on" data-money='{$shop_info.shop_price}' data-id='{$shop_info.id}' onclick="callpay()">立即购买</div>
                     </div>
                 </section>
 
@@ -56,6 +61,55 @@
     </section>
 </body>
 
-<script src="{$WebSiteUrlPublic}/javascript/pingpp-pc.js"></script>
+<input type='hidden' name='order_id' id='order_id' value='{$order_id}'>
 
+<input type='hidden' name='id' id='id' value='{$shop_info.id}'>
+
+<input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
+
+<input type='hidden' name='money' id='money' value='{$money}'>
+
+<script>
+
+function jsApiCall()
+    {
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',{$jsApiParameters},
+            function(res){
+
+                if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+
+                    order_status = 1;
+
+                } else{
+
+                    order_status = 2;
+                }
+
+                payS.buy(order_status)
+
+            }
+        );
+    }
+
+    function callpay()
+    {
+
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+
+            payS.createOrder();
+
+            jsApiCall();
+        }
+    }
+
+
+</script>
 </html>

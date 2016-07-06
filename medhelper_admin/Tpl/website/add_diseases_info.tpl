@@ -12,7 +12,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -27,7 +27,7 @@
         <input type='hidden' id='id' name='id' value='{$data.id}'>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">疾病知识一级分类(如内科系疾病)</label>
             <div>
                 {if $operation_type == 1}
                 <script>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">疾病知识二级分类(如呼吸内科)</label>
              <div>
                 {if $operation_type == 1}
                 <script>
@@ -67,7 +67,7 @@
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">疾病知识三级分类(如上呼吸道与气管疾病)</label>
              <div>
                 {if $operation_type == 1}
                 <script>
@@ -87,7 +87,7 @@
         </div>
 
          <div class="form-group">
-            <label for="college_type">四级分类</label>
+            <label for="college_type">疾病知识四级分类(如支气管肺炎)</label>
              <div>
                 {if $operation_type == 1}
                 <script>

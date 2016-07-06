@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 10:13:15
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:04:01
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_clinical_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:174457460057732ebbefc586-46944313%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1129715534577348b1856085-46786914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '062005218c9184fc7725c19a7662ba56f08dcb5f' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_clinical_info.tpl',
-      1 => 1467108581,
+      1 => 1467172799,
     ),
   ),
-  'nocache_hash' => '174457460057732ebbefc586-46944313',
+  'nocache_hash' => '1129715534577348b1856085-46786914',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,7 +51,7 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">临床检验知识一级分类(如血、尿、粪三大常规检查)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -73,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">临床检验知识二级分类(如呼血液常规检查)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -95,7 +95,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">临床检验知识三级分类(如红细胞计数)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>

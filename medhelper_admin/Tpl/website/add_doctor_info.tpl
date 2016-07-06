@@ -13,7 +13,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 

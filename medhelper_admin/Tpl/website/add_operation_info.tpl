@@ -12,7 +12,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -27,7 +27,7 @@
         <input type='hidden' id='id' name='id' value='{$data.id}'>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">手术知识一级分类(如常见手术知识)</label>
             <div>
                 {if $operation_type == 1}
                 <script>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">手术知识二级分类(如心胸外科)</label>
              <div>
                 {if $operation_type == 1}
                 <script>
@@ -67,7 +67,7 @@
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">手术知识三级分类(如硬脊膜外脓肿手术)</label>
              <div>
                 {if $operation_type == 1}
                 <script>

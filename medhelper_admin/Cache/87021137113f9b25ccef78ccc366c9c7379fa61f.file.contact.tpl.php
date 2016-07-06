@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-23 14:06:06
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:04:33
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/contact.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:516272246576b7c4ecc3a08-35722524%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1247663585577348d1b30a54-63438611%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '87021137113f9b25ccef78ccc366c9c7379fa61f' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/contact.tpl',
-      1 => 1465977244,
+      1 => 1467171782,
     ),
   ),
-  'nocache_hash' => '516272246576b7c4ecc3a08-35722524',
+  'nocache_hash' => '1247663585577348d1b30a54-63438611',
   'function' => 
   array (
   ),
@@ -30,7 +30,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('.agreement_content').summernote({
 
-            height: 300
+            height: 669
 
         });
 
@@ -39,10 +39,12 @@ $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body>
-    <div style='margin-top: 30px;margin-left: 20px;'>
-        <div class="form-group" style='width:700px;'>
-            <label for="agreement_content">联系方式</label>
-            <div class="agreement_content" id='content' style='width:300px;'><?php echo $_smarty_tpl->getVariable('html')->value;?>
+    <div style='margin-left: 20px;margin: 0 auto;width:375px;margin-top: 20px;'>
+
+     
+
+        <div class="form-group" style='width:375px;'>
+            <div class="agreement_content" id='content' style='width:375px;'><?php echo $_smarty_tpl->getVariable('html')->value;?>
 </div>
         </div>
         <div class="form-group">

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 10:13:18
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 11:51:51
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_type.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17007917257732ebe892871-03143472%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:315210875577345d71e4d00-81940151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3443dcd93d0bdf62b181655751beafe91d20dcb7' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_type.tpl',
-      1 => 1467108543,
+      1 => 1467172286,
     ),
   ),
-  'nocache_hash' => '17007917257732ebe892871-03143472',
+  'nocache_hash' => '315210875577345d71e4d00-81940151',
   'function' => 
   array (
   ),
@@ -31,7 +31,7 @@ $_smarty_tpl->decodeProperties(array (
                         <input type="text" class="form-control" id="name" placeholder="请输入分类名称" style='width:100%;'>
                         <p style='color: red;font-size: 14px;' id='name_error'></p>
                     </div>
-                    <?php if ($_smarty_tpl->getVariable('level')->value==1){?>
+                    <?php if ($_smarty_tpl->getVariable('level')->value==1||$_smarty_tpl->getVariable('level')->value==2){?>
                     <div class="form-group">
                         <label for="img_file">分类缩略图</label>
                         <input id='img_file' name='img_file' type="file" >

@@ -3,7 +3,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="{$WEBSITEPUBLIC}/css/css.css" rel="stylesheet" type="text/css"> 
+    <link href="{$WEBSITEPUBLIC}/css/css.css" rel="stylesheet" type="text/css">
+
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
     <title></title>
     <style>
     * {
@@ -12,21 +15,27 @@
     </style>
 </head>
 
-<body class='boby' style='min-height:500px;overflow:auto'>
-    <div class='bobyBackGroud' style=''>
-        <div style='overflow: hidden; height: 86px;'>
+<body class='boby'>
+    <div class='bobyBackGroud' style='width:98%;margin: 0 auto;'>
+        <div style='overflow: hidden; height: 86px; width: 98%;margin: 0 auto;'>
             {include file='top.tpl'}
         </div>
         <div style='  background-color: #fff;
-    border: 1px solid #d9dadc;height: 950px; width: 1250px ; margin: 0 auto;overflow:auto'>
-            <div style='float: left; overflow: hidden; height: 1000px; width: 16%;font-weight: bold;border-right: 1px solid #e7e7eb;'>
-                <iframe frameborder='0' src="{$WEBSITEURL}/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 1000px; width: 196px; {*margin-left: 5px;*}'></iframe>
+    border: 1px solid #d9dadc; width: 98% ; margin: 0 auto;height: 1000px;'>
+            <div style='float: left; width: 17%;font-weight: bold;background-color: white;;'>
+                <!-- <iframe frameborder='0' src="{$WEBSITEURL}/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 1000px; width: 196px; {*margin-left: 5px;*}'></iframe> -->
+
+                {include file='left.tpl'}
+
             </div>
-            <div style='float: left;height: 900px; width: 83%; margin-left: 3px'>
-                <iframe frameborder='0' src="{$WEBSITEPUBLIC}/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 1000px; width: 100%; border-radius: 10px 10px 0 0; overflow:auto;'></iframe>
+            <div style='float: left;height: 1235px; width: 82.5%;background-color: white;'>
+                <iframe frameborder='0' src="{$WEBSITEPUBLIC}/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 1235px; width: 100%;background-color: white;'></iframe>
             </div>
         </div>
+
+        <div style='clear:both;'>&nbsp;</div>
+
     </div>
 </body>
-</html>
 
+</html>

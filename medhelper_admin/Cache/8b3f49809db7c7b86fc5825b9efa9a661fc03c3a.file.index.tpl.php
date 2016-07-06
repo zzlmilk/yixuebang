@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:10:38
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 15:15:31
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/default/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:44954681757724d1ecb2a64-05045295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:967092929577375937185d0-03225242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8b3f49809db7c7b86fc5825b9efa9a661fc03c3a' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/default/index.tpl',
-      1 => 1467108544,
+      1 => 1467184530,
     ),
   ),
-  'nocache_hash' => '44954681757724d1ecb2a64-05045295',
+  'nocache_hash' => '967092929577375937185d0-03225242',
   'function' => 
   array (
   ),
@@ -22,7 +22,10 @@ $_smarty_tpl->decodeProperties(array (
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="<?php echo $_smarty_tpl->getVariable('WEBSITEPUBLIC')->value;?>
-/css/css.css" rel="stylesheet" type="text/css"> 
+/css/css.css" rel="stylesheet" type="text/css">
+
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
     <title></title>
     <style>
     * {
@@ -31,24 +34,31 @@ $_smarty_tpl->decodeProperties(array (
     </style>
 </head>
 
-<body class='boby' style='min-height:500px;overflow:auto'>
-    <div class='bobyBackGroud' style=''>
-        <div style='overflow: hidden; height: 86px;'>
+<body class='boby'>
+    <div class='bobyBackGroud' style='width:98%;margin: 0 auto;'>
+        <div style='overflow: hidden; height: 86px; width: 98%;margin: 0 auto;'>
             <?php $_template = new Smarty_Internal_Template('top.tpl', $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php $_template->updateParentVariables(0);?><?php unset($_template);?>
         </div>
         <div style='  background-color: #fff;
-    border: 1px solid #d9dadc;height: 950px; width: 1250px ; margin: 0 auto;overflow:auto'>
-            <div style='float: left; overflow: hidden; height: 1000px; width: 16%;font-weight: bold;border-right: 1px solid #e7e7eb;'>
-                <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WEBSITEURL')->value;?>
-/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 1000px; width: 196px; '></iframe>
+    border: 1px solid #d9dadc; width: 98% ; margin: 0 auto;height: 1000px;'>
+            <div style='float: left; width: 17%;font-weight: bold;background-color: white;;'>
+                <!-- <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WEBSITEURL')->value;?>
+/pageredirst.php?action=left&functionname=left" name="leftFrame" id="leftFrame" title="leftFrame" style=' height: 1000px; width: 196px; '></iframe> -->
+
+                <?php $_template = new Smarty_Internal_Template('left.tpl', $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php $_template->updateParentVariables(0);?><?php unset($_template);?>
+
             </div>
-            <div style='float: left;height: 900px; width: 83%; margin-left: 3px'>
+            <div style='float: left;height: 1235px; width: 82.5%;background-color: white;'>
                 <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WEBSITEPUBLIC')->value;?>
-/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 1000px; width: 100%; border-radius: 10px 10px 0 0; overflow:auto;'></iframe>
+/html/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" style='height: 1235px; width: 100%;background-color: white;'></iframe>
             </div>
         </div>
+
+        <div style='clear:both;'>&nbsp;</div>
+
     </div>
 </body>
-</html>
 
+</html>

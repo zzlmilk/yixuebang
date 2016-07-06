@@ -247,7 +247,7 @@ base.prototype.saveType = function(type, level) {
 
     var i = 0;
 
-    if (level == 1) {
+    if (level == 1 || level == 2) {
 
         var img_file = document.getElementById('img_file').files[0];
 

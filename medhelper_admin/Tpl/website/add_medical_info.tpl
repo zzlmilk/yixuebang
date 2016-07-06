@@ -12,7 +12,7 @@
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -27,15 +27,13 @@
         <input type='hidden' id='id' name='id' value='{$data.id}'>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">急诊知识一级分类(如常见急症)</label>
             <div>
                 {if $operation_type == 1}
                 <script>
                 $(function() {
 
                     var type_id_1 = '{$data.type_id_1}'
-
-                    alert(type_id_1)
 
 
                     sessionStorage.setItem("type_id_1", type_id_1);
@@ -50,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">急诊知识二级分类(如发烧)</label>
              <div>
                 {if $operation_type == 1}
                 <script>

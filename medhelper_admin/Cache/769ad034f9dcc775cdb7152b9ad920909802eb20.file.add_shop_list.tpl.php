@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-22 15:39:11
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:01:56
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_shop_list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:922419033576a409fd7ad46-72388530%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:79744309357734834e26808-17470429%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '769ad034f9dcc775cdb7152b9ad920909802eb20' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_shop_list.tpl',
-      1 => 1466419280,
+      1 => 1467172914,
     ),
   ),
-  'nocache_hash' => '922419033576a409fd7ad46-72388530',
+  'nocache_hash' => '79744309357734834e26808-17470429',
   'function' => 
   array (
   ),
@@ -30,7 +30,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#shop_describe').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -71,14 +71,14 @@ $_smarty_tpl->decodeProperties(array (
 
         <div class="form-group">
             <label for="logo">封面图</label>
-            <input id='logo' name='logo' type="file" class="btn-primary"> 
+            <input id='logo' name='logo' type="file" > 
 
             <p style='color: red;font-size: 14px;' id='logo_error'></p> 
         </div>
 
         <div class="form-group">
             <label for="shop_content">商品附件</label>
-            <input id='shop_content' name='shop_content' type="file" class="btn-primary">  
+            <input id='shop_content' name='shop_content' type="file" >  
 
             <p style='color: red;font-size: 14px;' id='shop_content_error'></p> 
         </div>
@@ -91,6 +91,7 @@ $_smarty_tpl->decodeProperties(array (
 
         <button type="submit" class="btn btn-default" onclick='base.submitShop()'>Submit</button>
 
+        <button type="submit" class="btn btn-default" onclick='base.preview("shop_describe")'>预览</button>
     </div>
 
     <div style='height:50px;'></div>

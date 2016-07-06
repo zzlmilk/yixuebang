@@ -5,6 +5,10 @@ $(function() {
 
     $('table').css('display', 'block');
 
+    $('table').css('width', '200px');
+
+    $('a').css('width', '100%');
+
 
     $('.left-a').click(function() {
 
@@ -12,18 +16,27 @@ $(function() {
 
         $(this).addClass('selected');
 
+    })
+
+    $('a').click(function(){
+
+        var module_name = $(this).text()
+
+        $('#top_name').text(module_name)
+
+        console.log(module_name)
 
     })
 })
 </script>
-<div class="left_background" style='{*border-radius: 10px 10px 0 0;*} width:200px;'>
+<div class="left_background" style='width:200px;background-color: white;border-right: 1px solid #d9dadc'>
     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table01" style=''>
         <tr>
             <td>
                 <!--                    公司模块开始-->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class=" zhucaidan " id="table120">
+                <table  border="0" cellpadding="0" cellspacing="0" class=" zhucaidan " id="table120">
                     <tr>
-                        <td height="29" onclick="list('120')">
+                        <td height="29" >
                             <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="85%">
@@ -34,7 +47,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree120" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree120" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -54,11 +67,11 @@ $(function() {
 
                 <table width="100%" border="0" cellpadding="0" cellspacing="0" class=" zhucaidan " id="table120">
                     <tr>
-                        <td height="29" onclick="list('121')">
+                        <td height="29" >
                             <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="85%">
-                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font">商城管理</a>
+                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font">知识商城管理</a>
                                     </td>
                                 </tr>
                             </table>
@@ -66,11 +79,11 @@ $(function() {
                     </tr>
                 </table>
 
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
-                                <a style='' href="{$WEBSITEURL}/pageredirst.php?action=shop&functionname=shop_list" target="mainFrame" class="left-fontSmall">商城列表</a>
+                                <a style='' href="{$WEBSITEURL}/pageredirst.php?action=shop&functionname=shop_list" target="mainFrame" class="left-fontSmall">知识商城列表</a>
                             </div>
                         </td>
                     </tr>
@@ -89,7 +102,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree121" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree121" style="DISPLAY: none" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -113,7 +126,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree121" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree121" style="DISPLAY: none" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -136,7 +149,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree121" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree121" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -159,7 +172,7 @@ $(function() {
                     </tr>
                 </table>
 
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -182,7 +195,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -205,7 +218,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -228,7 +241,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -252,7 +265,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none"   border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -275,7 +288,7 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree124" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree124" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -289,7 +302,7 @@ $(function() {
 
                 <table width="100%" border="0" cellpadding="0" cellspacing="0" class=" zhucaidan " id="table120">
                     <tr>
-                        <td height="29" onclick="list('121')">
+                        <td height="29" >
                             <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="85%">
@@ -300,7 +313,14 @@ $(function() {
                         </td>
                     </tr>
                 </table>
-                <table id="subtree121" style="DISPLAY: none" width="100%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                <table id="subtree121" style="DISPLAY: none"  border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                    <tr>
+                        <td width="100%">
+                            <div class='left-a'>
+                                <a style='' href="{$WEBSITEURL}/pageredirst.php?action=config&functionname=setAdminPassword" target="mainFrame" class="left-fontSmall">设置管理员密码</a>
+                            </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td width="100%">
                             <div class='left-a'>
@@ -322,6 +342,15 @@ $(function() {
                             </div>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td width="100%">
+                            <div class='left-a'>
+                                <a style='' href="{$WEBSITEURL}/pageredirst.php?action=config&functionname=baiduAccount" target="mainFrame" class="left-fontSmall">百度统计</a>
+                            </div>
+                        </td>
+                    </tr>
+
                 </table>
 
 

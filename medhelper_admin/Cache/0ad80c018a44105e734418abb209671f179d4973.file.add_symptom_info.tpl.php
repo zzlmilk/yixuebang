@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:15:41
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 12:00:55
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_symptom_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:22183483357724e4d317fc7-16214977%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1652920003577347f709d670-74754709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0ad80c018a44105e734418abb209671f179d4973' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_symptom_info.tpl',
-      1 => 1467108707,
+      1 => 1467172837,
     ),
   ),
-  'nocache_hash' => '22183483357724e4d317fc7-16214977',
+  'nocache_hash' => '1652920003577347f709d670-74754709',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,7 +51,7 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">导医一级分类(如成人疾病)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -73,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">导医二级分类(如眼眉)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -95,7 +95,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">导医三级分类(如双眼皮)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>

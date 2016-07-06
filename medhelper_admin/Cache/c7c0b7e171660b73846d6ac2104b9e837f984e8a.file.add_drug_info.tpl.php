@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-28 18:20:02
+<?php /* Smarty version Smarty-3.0-RC2, created on 2016-06-29 15:12:44
          compiled from "/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_drug_info.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17246403557724f52719c84-77483505%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:771856690577374eceab4f1-74077003%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c7c0b7e171660b73846d6ac2104b9e837f984e8a' => 
     array (
       0 => '/private/var/www/html/yixuebang/medhelper_admin/Tpl/website/add_drug_info.tpl',
-      1 => 1467108599,
+      1 => 1467173077,
     ),
   ),
-  'nocache_hash' => '17246403557724f52719c84-77483505',
+  'nocache_hash' => '771856690577374eceab4f1-74077003',
   'function' => 
   array (
   ),
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
         $('#article_content').summernote({
 
-            height: 200
+            height: 669
 
         });
 
@@ -51,7 +51,7 @@ $_smarty_tpl->decodeProperties(array (
 '>
        
         <div class="form-group">
-            <label for="auther">一级分类</label>
+            <label for="auther">药品一级分类(如呼吸系统疾病用药)</label>
             <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -73,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
         <div class="form-group">
-            <label for="college_type">二级分类</label>
+            <label for="college_type">药品二级分类(如感冒用化学药)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>
@@ -95,7 +95,7 @@ $_smarty_tpl->decodeProperties(array (
         </div>
 
          <div class="form-group">
-            <label for="college_type">三级分类</label>
+            <label for="college_type">药品三级分类(如氨酚美伪麻片学药)</label>
              <div>
                 <?php if ($_smarty_tpl->getVariable('operation_type')->value==1){?>
                 <script>

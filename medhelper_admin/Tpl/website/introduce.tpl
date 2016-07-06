@@ -9,7 +9,7 @@
 
         $('.agreement_content').summernote({
 
-            height: 300
+            height: 669
 
         });
 
@@ -18,10 +18,10 @@
 </head>
 
 <body>
-    <div style='margin-top: 30px;margin-left: 20px;'>
-        <div class="form-group" style='width:700px;'>
-            <label for="agreement_content">公司介绍</label>
-            <div class="agreement_content" id='content' style='width:300px;'>{$html}</div>
+    <div style='width:375px;margin: 0 auto;margin-top: 20px;'>
+
+        <div class="form-group" style='width:375px;'>
+            <div class="agreement_content" id='content' style='width:375px;'>{$html}</div>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default" onclick='introduce.submitHtml()'>保存</button>
